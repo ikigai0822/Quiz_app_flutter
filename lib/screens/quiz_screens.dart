@@ -55,7 +55,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20.0,
-                        fontWeight: FontWeight.w800
+                        fontWeight: FontWeight.w500
                       ),
                     ),
                   ),
@@ -68,12 +68,13 @@ class _QuizzScreenState extends State<QuizzScreen> {
                   ),
                   SizedBox(
                     width: double.infinity,
-                    height: 200.0,
+                    height: 100.0,
                     child: Text(
                       "${question[index].question}",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 22.0,
+                        fontWeight: FontWeight.w800
                       ),
                     ),
                   ),
@@ -128,8 +129,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                 builder: (context) => ResultScreen(score)));
                       } else {
                         _controller!.nextPage(
-                            duration: Duration(milliseconds: 250),
-                            curve: Curves.easeInExpo);
+                            duration: Duration(milliseconds: 300),
+                            curve: Curves.easeIn);
 
                         setState(() {
                           btnPressed = false;

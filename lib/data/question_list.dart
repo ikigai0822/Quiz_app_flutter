@@ -13,17 +13,17 @@ List<QuestionModel> question = [
   QuestionModel("What is the square of 42?",
     {
     
-      "1764": true,
       "1681": false,
       "1849": false,
+      "1764": true,
       "1936": false,
     }
   ),
 
   QuestionModel("Baku is the capital of which country?",
     {
-      "Azerbaijan": true,
       "Kazakhstan": false,
+      "Azerbaijan": true,
       "Armenia": false,
       "Turkmenistan": false,
     }
@@ -31,10 +31,10 @@ List<QuestionModel> question = [
 
   QuestionModel("Name the currency used in Japan?",
     {
-      "Yen": true,
       "Rupee": false,
       "Dollar": false,
       "Euro": false,
+      "Yen": true,
     }
   ),
 
@@ -49,17 +49,17 @@ List<QuestionModel> question = [
 
   QuestionModel("The distance traveled by light in one year is called _______",
     {
-      "Light Year": true,
       "Parsec": false,
       "Astronomical Unit": false,
+      "Light Year": true,
       "Light Minute": false,
     }
   ),
 
   QuestionModel("When is World Hearing Day?",
     {
-      "March 23": true,
       "April 7": false,
+      "March 23": true,
       "May 15": false,
       "June 10": false,
     }
@@ -67,28 +67,28 @@ List<QuestionModel> question = [
 
   QuestionModel("What is the theme of World Hearing Day 2022?",
     {
-      "To hear for life, listen with care!": true,
       "Sound Check: Check Your Hearing!": false,
       "Protect Your Hearing, Keep Sound in Mind!": false,
+      "To hear for life, listen with care!": true,
       "Listen up! Don't let noise damage your hearing!": false,
    }
   ),
 
   QuestionModel("_______________ is known as 'antisterility vitamin'?",
     {
-      "Vitamin E": true,
       "Vitamin C": false,
       "Vitamin B12": false,
       "Vitamin A": false,
+      "Vitamin E": true,
     }
   ),
 
   QuestionModel("Name a non-metal that conducts electricity?",
     {
-      "Graphite": true,
       "Copper": false,
       "Silver": false,
       "Aluminum": false,
+      "Graphite": true,
     }
   )
 
