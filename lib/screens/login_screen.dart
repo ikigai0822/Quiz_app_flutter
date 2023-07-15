@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Login Page',
       theme: ThemeData(
-        
+        scaffoldBackgroundColor: AppColor.pripmaryColor
       ),
       home: const Login(title: 'Login Screen'),
     );
@@ -47,6 +47,15 @@ class _LoginState extends State<Login> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 100,
+                child: Text('Welcome',
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold
+                ),
+                )),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -54,12 +63,6 @@ class _LoginState extends State<Login> {
                   controller: emailController,
                   decoration: const InputDecoration(
                       border: OutlineInputBorder(), labelText: "Email"),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter your email';
-                    }
-                    return null;
-                  },
                 ),
               ),
               Padding(
@@ -88,9 +91,9 @@ class _LoginState extends State<Login> {
                     },
 
                     child: const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
+                      padding: EdgeInsets.symmetric(vertical: 18.0, horizontal: 10.0),
                       child: Text(
-                        "Go to Main Screen",
+                        "Submit",
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 26.0,

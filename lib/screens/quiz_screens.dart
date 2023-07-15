@@ -54,12 +54,14 @@ class _QuizzScreenState extends State<QuizzScreen> {
                       textAlign: TextAlign.start,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 28.0,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w800
                       ),
                     ),
                   ),
                   Divider(
                     color: Colors.white,
+                    
                   ),
                   SizedBox(
                     height: 10.0,
