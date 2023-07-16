@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:main_app/data/question_list.dart';
 import 'package:main_app/screens/result_screen.dart';
@@ -11,7 +13,7 @@ class QuizzScreen extends StatefulWidget {
 }
 
 class _QuizzScreenState extends State<QuizzScreen> {
-  int question_pos = 0;
+  int questionPos = 0;
   int score = 0;
   bool btnPressed = false;
   PageController? _controller;
@@ -41,7 +43,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                 answered = false;
               });
             },
-            physics: new NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -52,18 +54,18 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     child: Text(
                       "Question ${index + 1}/10",
                       textAlign: TextAlign.start,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20.0,
                         fontWeight: FontWeight.w500
                       ),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     color: Colors.white,
                     
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10.0,
                   ),
                   SizedBox(
@@ -71,7 +73,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     height: 100.0,
                     child: Text(
                       "${question[index].question}",
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 22.0,
                         fontWeight: FontWeight.w800
@@ -82,7 +84,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     Container(
                       width: double.infinity,
                       height: 50.0,
-                      margin: EdgeInsets.only(
+                      margin: const EdgeInsets.only(
                           bottom: 20.0, left: 12.0, right: 12.0),
                       child: RawMaterialButton(
                         shape: RoundedRectangleBorder(
@@ -111,13 +113,13 @@ class _QuizzScreenState extends State<QuizzScreen> {
                               }
                             : null,
                         child: Text(question[index].answers!.keys.toList()[i],
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 18.0,
                             )),
                       ),
                     ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40.0,
                   ),
                   RawMaterialButton(
@@ -129,7 +131,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                 builder: (context) => ResultScreen(score)));
                       } else {
                         _controller!.nextPage(
-                            duration: Duration(milliseconds: 300),
+                            duration: const Duration(milliseconds: 300),
                             curve: Curves.easeIn);
 
                         setState(() {
@@ -137,13 +139,13 @@ class _QuizzScreenState extends State<QuizzScreen> {
                         });
                       }
                     },
-                    shape: StadiumBorder(),
+                    shape: const StadiumBorder(),
                     fillColor: Colors.blue,
-                    padding: EdgeInsets.all(18.0),
+                    padding: const EdgeInsets.all(18.0),
                     elevation: 0.0,
                     child: Text(
                       btnText,
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     ),
                   )
                 ],

@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:main_app/screens/main_menu.dart';
 import 'package:main_app/ui/shared/color.dart';
@@ -60,7 +62,7 @@ class _LoginState extends State<Login> {
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   child: TextFormField(
                     controller: emailController,
-                    style: TextStyle(color: Colors.white), // Set the text color to white
+                    style: const TextStyle(color: Colors.white), // Set the text color to white
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: "Email",
@@ -73,7 +75,7 @@ class _LoginState extends State<Login> {
                     const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                 child: TextFormField(
                   controller: passwordController,
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                   obscureText: true,
                   decoration: const InputDecoration(
                       border: OutlineInputBorder(),
@@ -92,7 +94,7 @@ class _LoginState extends State<Login> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MainMenu(),
+                          builder: (context) => const MainMenu(),
                         ),
                       );
                     },

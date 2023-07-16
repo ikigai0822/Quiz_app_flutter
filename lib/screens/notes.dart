@@ -29,11 +29,11 @@ class _HomepageState extends State<Homepage> {
   Color mainColor = const Color(0xFF071D36);
   Color secondColor = const Color(0xFF0D121F);
   
-  PageController? _controller = PageController(initialPage: 0);
+  final PageController _controller = PageController(initialPage: 0);
   bool isPressed = false;
   Color rightAnswer = Colors.green;
   Color wrongAnswer = Colors.red;
-  Color btnColor =  Color(0xFF0D121F);
+  Color btnColor =  const Color(0xFF0D121F);
   int score = 0;
   @override
   Widget build(BuildContext context) {
@@ -45,6 +45,7 @@ class _HomepageState extends State<Homepage> {
           controller: _controller,
           onPageChanged: (page) {
             setState(() {
+              // ignore: unused_label
               isPressed: false;
             });
           },
@@ -87,7 +88,7 @@ class _HomepageState extends State<Homepage> {
                   for(int i = 0; i<question[index].answers!.length; i++)
                   Container(
                     width: double.infinity,
-                    margin:  EdgeInsets.only(bottom: 18.0),
+                    margin:  const EdgeInsets.only(bottom: 18.0),
                     child: MaterialButton(
                       hoverColor: const Color.fromARGB(255, 36, 113, 130),
                       shape: const StadiumBorder(),
@@ -96,7 +97,7 @@ class _HomepageState extends State<Homepage> {
                             ? rightAnswer
                             :wrongAnswer
                           :secondColor,
-                      padding:  EdgeInsets.symmetric(vertical: 18.0),
+                      padding:  const EdgeInsets.symmetric(vertical: 18.0),
                       onPressed: isPressed 
                       ? (){}
                       :(){
@@ -122,11 +123,11 @@ class _HomepageState extends State<Homepage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          SizedBox(height: 50),
+                          const SizedBox(height: 50),
                       OutlinedButton(
                       onPressed: isPressed 
                         ?() {
-                            _controller!.nextPage(duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
+                            _controller.nextPage(duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
                       }: null,
                         child: const Text("Next Question",
                         style: TextStyle(
