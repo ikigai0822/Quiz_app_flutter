@@ -1,6 +1,3 @@
-// ignore_for_file: unused_label
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:main_app/data/question_list.dart';
 

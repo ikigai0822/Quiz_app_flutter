@@ -57,23 +57,30 @@ class _LoginState extends State<Login> {
                 ),
                 )),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                child: TextFormField(
-                  controller: emailController,
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(), labelText: "Email"),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  child: TextFormField(
+                    controller: emailController,
+                    style: TextStyle(color: Colors.white), // Set the text color to white
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: "Email",
+                      labelStyle: TextStyle(color: Colors.white), // Set the label color to white
+                    ),
+                  ),
                 ),
-              ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                 child: TextFormField(
                   controller: passwordController,
+                  style: TextStyle(color: Colors.white),
                   obscureText: true,
                   decoration: const InputDecoration(
-                      border: OutlineInputBorder(), labelText: "Password"),
-                ),
+                      border: OutlineInputBorder(),
+                       labelText: "Password",
+                       labelStyle: TextStyle(color: Colors.white),
+                  ),
+                )
               ),
               Padding(
                 padding:
